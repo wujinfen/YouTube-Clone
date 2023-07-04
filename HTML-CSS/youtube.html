@@ -1,72 +1,97 @@
 <!DOCTYPE html>
 <html>
+    <!--Roy Wu | YouTube Clone | HTML & CSS Practice-->
+    <!--to practice: semantic elements-->
 
     <head>
         <title>YouTube.com Clone</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-        <style>
-            p {
-                font-family: Roboto, Arial;
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-            .thumbnail {
-                width: 100%;
-            }
-            .search-bar {
-                display: block;
-            }
-            .video-title {
-                margin-top: 0px;
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 20px;
-                margin-bottom: 12px;
-            }
-            .video-creator {
-                display: inline-block;
-            }
-            .video-info-grid {
-                display: grid;
-                grid-template-columns: 50px 1fr;
-            }
-            .profile-pic {
-                width: 40px;
-                border-radius: 50px;
-            }
-            .thumbnail-row {
-                margin-bottom: 12px;
-            }
-            .video-creator, .video-stats {
-                font-size: 12px;
-                color: #606060;
-            }
-            .video-creator {
-                margin-bottom: 4px;
-            }
-            .video-grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                column-gap: 16px;
-                row-gap: 40px;
-            }
-        </style>
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/video.css">
+        <link rel="stylesheet" href="styles/sidebar.css"
 
     </head>
 
 
     <body>
+        <div class = "header">
 
-        <input class = "search-bar" type = "text" placeholder = "Search">
+            <div class = "left-section">
+                <img class = "hamburger-menu" src="icon-pics/hamburger-menu.svg">
+                <img class = "youtube-logo" src="icon-pics/youtube-logo.svg">
+            </div>
+
+
+            <div class = "middle-section">
+                <input class = "search-bar" type = "text" placeholder = "Search">
+                <button class = "search-button">
+                    <img class = "search-icon" src="icon-pics/search.svg">
+                    <div class = "tooltip">Search</div>
+                </button> 
+                <button class = "mic-button">
+                    <img class = "mic-icon" src= "icon-pics/mic.svg">
+                    <div class = "tooltip">Search with your voice</div>
+                </button> 
+            </div> 
+
+
+            <div class = "right-section">
+                <div class = "upload-icon-container">
+                    <img class = "upload-icon" src = "icon-pics/upload.svg">
+                    <div class = "tooltip">Create</div>
+                </div>
+                
+                <div class = "youtube-apps-icon-container">
+                    <img class = "youtube-apps-icon" src = "icon-pics/youtube-apps.svg">
+                    <div class = "tooltip">YouTube apps</div>
+                </div>
+
+                <div class = "notifications-icon-container">
+                    <img class = "notifications-icon" src = "icon-pics/notifications.svg">
+                    <div class = "notifications-count">7</div>
+                    <div class = "tooltip">Notifications</div>
+                </div>
+                <img class = "current-user-picture" src = "channel-pics/shiina-icon.jpg">
+            </div>
+    
+        </div>
+        
+        <div class = "sidebar">
+            <div class = "sidebar-link">
+                <img src = "icon-pics/home.svg">
+                <div>Home</div>
+            </div>
+            <div class = "sidebar-link">
+                <img src = "icon-pics/explore.svg">
+                <div>Explore</div>
+            </div>
+            <div class = "sidebar-link">
+                <img src = "icon-pics/subscriptions.svg">
+                <div>Subscriptions</div>
+            </div>
+            <div class = "sidebar-link">
+                <img src = "icon-pics/originals.svg">
+                <div>Originals</div>
+            </div>
+            <div class = "sidebar-link">
+                <img src = "icon-pics/youtube-music.svg">
+                <div>YouTube Music</div>
+            </div>
+            <div class = "sidebar-link">
+                <img src = "icon-pics/library.svg">
+                <div>Library</div>
+            </div>
+        </div>
         
         <div class = "video-grid">
 
             <div class = "video-preview">
                 <div class = "thumbnail-row">
                     <img class = "thumbnail" src = "thumbnails/thumbnail-1.webp">
+                    <div class = "video-time">14:20</div>
                 </div>
     
                 <div class = "video-info-grid">
@@ -84,6 +109,7 @@
             <div class = "video-preview">
                 <div class = "thumbnail-row">
                     <img class = "thumbnail" src = "thumbnails/thumbnail-2.webp">
+                    <div class = "video-time">8:22</div>
                 </div>
                 
                 <div class = "video-info-grid">
@@ -101,6 +127,7 @@
             <div class = "video-preview">
                 <div class = "thumbnail-row">
                     <img class = "thumbnail" src = "thumbnails/thumbnail-3.webp">
+                    <div class = "video-time2">9:13</div>
                 </div>
     
                 <div class = "video-info-grid">
@@ -118,6 +145,7 @@
             <div class = "video-preview">
                 <div class = "thumbnail-row">
                     <img class = "thumbnail" src = "thumbnails/thumbnail-4.webp">
+                    <div class = "video-time">22:09</div>
                 </div>
                 
                 <div class = "video-info-grid">
@@ -135,6 +163,7 @@
             <div class = "video-preview">
                 <div class = "thumbnail-row">
                     <img class = "thumbnail" src = "thumbnails/thumbnail-5.webp">
+                    <div class = "video-time">11:17</div>
                 </div>
     
                 <div class = "video-info-grid">
@@ -152,6 +181,7 @@
             <div class = "video-preview">
                 <div class = "thumbnail-row">
                     <img class = "thumbnail" src = "thumbnails/thumbnail-6.webp">
+                    <div class = "video-time">19:59</div>
                 </div>
                 
                 <div class = "video-info-grid">
